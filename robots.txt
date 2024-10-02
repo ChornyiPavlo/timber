@@ -2,5 +2,5 @@ User-Agent: *
 Disallow:
 
 
-Sitemap: http://pinapaz.timbertrailpin.pro/sitemap.xml
-Host: pinapaz.timbertrailpin.pro
+Sitemap: http://pinupaz.timbertrailpin.pro/sitemap.xml
+Host: pinupaz.timbertrailpin.pro
