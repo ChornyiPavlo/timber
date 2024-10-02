@@ -1,0 +1,612 @@
+<!--allrecords--><div id="allrecords" data-tilda-export="yes" class="t-records" data-hook="blocks-collection-content-node" data-tilda-project-id="10709663" data-tilda-page-id="55795863" data-tilda-formskey="a55c0c751e1a899d7ce6ec4c10709663" data-tilda-cookie="no" data-tilda-lazy="yes" data-tilda-root-zone="one" ><div id="rec805862272" class="r t-rec" style=" " data-animationappear="off" data-record-type="967" ><!-- T967 --><div id="nav805862272marker"></div><div class="tmenu-mobile" ><div class="tmenu-mobile__container"><div class="tmenu-mobile__text t-name t-name_md" field="menu_mob_title">&nbsp;</div><button type="button" 
+class="t-menuburger t-menuburger_first " 
+aria-label="Навигационное меню" 
+aria-expanded="false"><span style="background-color:#000;"></span><span style="background-color:#000;"></span><span style="background-color:#000;"></span><span style="background-color:#000;"></span></button><script>function t_menuburger_init(recid) {
+var rec = document.querySelector('#rec' + recid);
+if (!rec) return;
+var burger = rec.querySelector('.t-menuburger');
+if (!burger) return;
+var isSecondStyle = burger.classList.contains('t-menuburger_second');
+if (isSecondStyle && !window.isMobile && !('ontouchend' in document)) {
+burger.addEventListener('mouseenter', function() {
+if (burger.classList.contains('t-menuburger-opened')) return;
+burger.classList.remove('t-menuburger-unhovered');
+burger.classList.add('t-menuburger-hovered');
+});
+burger.addEventListener('mouseleave', function() {
+if (burger.classList.contains('t-menuburger-opened')) return;
+burger.classList.remove('t-menuburger-hovered');
+burger.classList.add('t-menuburger-unhovered');
+setTimeout(function() {
+burger.classList.remove('t-menuburger-unhovered');
+}, 300);
+});
+}
+burger.addEventListener('click', function() {
+if (!burger.closest('.tmenu-mobile') &&
+!burger.closest('.t450__burger_container') &&
+!burger.closest('.t466__container') &&
+!burger.closest('.t204__burger') &&
+!burger.closest('.t199__js__menu-toggler')) {
+burger.classList.toggle('t-menuburger-opened');
+burger.classList.remove('t-menuburger-unhovered');
+}
+});
+var menu = rec.querySelector('[data-menu="yes"]');
+if (!menu) return;
+var menuLinks = menu.querySelectorAll('.t-menu__link-item');
+var submenuClassList = ['t978__menu-link_hook', 't978__tm-link', 't966__tm-link', 't794__tm-link', 't-menusub__target-link'];
+Array.prototype.forEach.call(menuLinks, function (link) {
+link.addEventListener('click', function () {
+var isSubmenuHook = submenuClassList.some(function (submenuClass) {
+return link.classList.contains(submenuClass);
+});
+if (isSubmenuHook) return;
+burger.classList.remove('t-menuburger-opened');
+});
+});
+menu.addEventListener('clickedAnchorInTooltipMenu', function () {
+burger.classList.remove('t-menuburger-opened');
+});
+}
+t_onReady(function() {
+t_onFuncLoad('t_menuburger_init', function(){t_menuburger_init('805862272');});
+});</script><style>.t-menuburger {
+position: relative;
+flex-shrink: 0;
+width: 28px;
+height: 20px;
+padding: 0;
+border: none;
+background-color: transparent;
+outline: none;
+-webkit-transform: rotate(0deg);
+transform: rotate(0deg);
+transition: transform .5s ease-in-out;
+cursor: pointer;
+z-index: 999;
+}
+/*---menu burger lines---*/
+.t-menuburger span {
+display: block;
+position: absolute;
+width: 100%;
+opacity: 1;
+left: 0;
+-webkit-transform: rotate(0deg);
+transform: rotate(0deg);
+transition: .25s ease-in-out;
+height: 3px;
+background-color: #000;
+}
+.t-menuburger span:nth-child(1) {
+top: 0px;
+}
+.t-menuburger span:nth-child(2),
+.t-menuburger span:nth-child(3) {
+top: 8px;
+}
+.t-menuburger span:nth-child(4) {
+top: 16px;
+}
+/*menu burger big*/
+.t-menuburger__big {
+width: 42px;
+height: 32px;
+}
+.t-menuburger__big span {
+height: 5px;
+}
+.t-menuburger__big span:nth-child(2),
+.t-menuburger__big span:nth-child(3) {
+top: 13px;
+}
+.t-menuburger__big span:nth-child(4) {
+top: 26px;
+}
+/*menu burger small*/
+.t-menuburger__small {
+width: 22px;
+height: 14px;
+}
+.t-menuburger__small span {
+height: 2px;
+}
+.t-menuburger__small span:nth-child(2),
+.t-menuburger__small span:nth-child(3) {
+top: 6px;
+}
+.t-menuburger__small span:nth-child(4) {
+top: 12px;
+}
+/*menu burger opened*/
+.t-menuburger-opened span:nth-child(1) {
+top: 8px;
+width: 0%;
+left: 50%;
+}
+.t-menuburger-opened span:nth-child(2) {
+-webkit-transform: rotate(45deg);
+transform: rotate(45deg);
+}
+.t-menuburger-opened span:nth-child(3) {
+-webkit-transform: rotate(-45deg);
+transform: rotate(-45deg);
+}
+.t-menuburger-opened span:nth-child(4) {
+top: 8px;
+width: 0%;
+left: 50%;
+}
+.t-menuburger-opened.t-menuburger__big span:nth-child(1) {
+top: 6px;
+}
+.t-menuburger-opened.t-menuburger__big span:nth-child(4) {
+top: 18px;
+}
+.t-menuburger-opened.t-menuburger__small span:nth-child(1),
+.t-menuburger-opened.t-menuburger__small span:nth-child(4) {
+top: 6px;
+}
+/*---menu burger first style---*/
+@media (hover), (min-width:0\0) {
+.t-menuburger_first:hover span:nth-child(1) {
+transform: translateY(1px);
+}
+.t-menuburger_first:hover span:nth-child(4) {
+transform: translateY(-1px);
+}
+.t-menuburger_first.t-menuburger__big:hover span:nth-child(1) {
+transform: translateY(3px);
+}
+.t-menuburger_first.t-menuburger__big:hover span:nth-child(4) {
+transform: translateY(-3px);
+}
+}
+/*---menu burger second style---*/
+.t-menuburger_second span:nth-child(2),
+.t-menuburger_second span:nth-child(3) {
+width: 80%;
+left: 20%;
+right: 0;
+}
+@media (hover), (min-width:0\0) {
+.t-menuburger_second.t-menuburger-hovered span:nth-child(2),
+.t-menuburger_second.t-menuburger-hovered span:nth-child(3) {
+animation: t-menuburger-anim 0.3s ease-out normal forwards;
+}
+.t-menuburger_second.t-menuburger-unhovered span:nth-child(2),
+.t-menuburger_second.t-menuburger-unhovered span:nth-child(3) {
+animation: t-menuburger-anim2 0.3s ease-out normal forwards;
+}
+}
+.t-menuburger_second.t-menuburger-opened span:nth-child(2),
+.t-menuburger_second.t-menuburger-opened span:nth-child(3){
+left: 0;
+right: 0;
+width: 100%!important;
+}
+/*---menu burger third style---*/
+.t-menuburger_third span:nth-child(4) {
+width: 70%;
+left: unset;
+right: 0;
+}
+@media (hover), (min-width:0\0) {
+.t-menuburger_third:not(.t-menuburger-opened):hover span:nth-child(4) {
+width: 100%;
+}
+}
+.t-menuburger_third.t-menuburger-opened span:nth-child(4) {
+width: 0!important;
+right: 50%;
+}
+/*---menu burger fourth style---*/
+.t-menuburger_fourth {
+height: 12px;
+}
+.t-menuburger_fourth.t-menuburger__small {
+height: 8px;
+}
+.t-menuburger_fourth.t-menuburger__big {
+height: 18px;
+}
+.t-menuburger_fourth span:nth-child(2),
+.t-menuburger_fourth span:nth-child(3) {
+top: 4px;
+opacity: 0;
+}
+.t-menuburger_fourth span:nth-child(4) {
+top: 8px;
+}
+.t-menuburger_fourth.t-menuburger__small span:nth-child(2),
+.t-menuburger_fourth.t-menuburger__small span:nth-child(3) {
+top: 3px;
+}
+.t-menuburger_fourth.t-menuburger__small span:nth-child(4) {
+top: 6px;
+}
+.t-menuburger_fourth.t-menuburger__small span:nth-child(2),
+.t-menuburger_fourth.t-menuburger__small span:nth-child(3) {
+top: 3px;
+}
+.t-menuburger_fourth.t-menuburger__small span:nth-child(4) {
+top: 6px;
+}
+.t-menuburger_fourth.t-menuburger__big span:nth-child(2),
+.t-menuburger_fourth.t-menuburger__big span:nth-child(3) {
+top: 6px;
+}
+.t-menuburger_fourth.t-menuburger__big span:nth-child(4) {
+top: 12px;
+}
+@media (hover), (min-width:0\0) {
+.t-menuburger_fourth:not(.t-menuburger-opened):hover span:nth-child(1) {
+transform: translateY(1px);
+}
+.t-menuburger_fourth:not(.t-menuburger-opened):hover span:nth-child(4) {
+transform: translateY(-1px);
+}
+.t-menuburger_fourth.t-menuburger__big:not(.t-menuburger-opened):hover span:nth-child(1) {
+transform: translateY(3px);
+}
+.t-menuburger_fourth.t-menuburger__big:not(.t-menuburger-opened):hover span:nth-child(4) {
+transform: translateY(-3px);
+}
+}
+.t-menuburger_fourth.t-menuburger-opened span:nth-child(1),
+.t-menuburger_fourth.t-menuburger-opened span:nth-child(4) {
+top: 4px;
+}
+.t-menuburger_fourth.t-menuburger-opened span:nth-child(2),
+.t-menuburger_fourth.t-menuburger-opened span:nth-child(3) {
+opacity: 1;
+}
+/*---menu burger animations---*/
+@keyframes t-menuburger-anim {
+0% {
+width: 80%;
+left: 20%;
+right: 0;
+}
+50% {
+width: 100%;
+left: 0;
+right: 0;
+}
+100% {
+width: 80%;
+left: 0;
+right: 20%;
+}
+}
+@keyframes t-menuburger-anim2 {
+0% {
+width: 80%;
+left: 0;
+}
+50% {
+width: 100%;
+right: 0;
+left: 0;
+}
+100% {
+width: 80%;
+left: 20%;
+right: 0;
+}
+}</style> </div></div><style>.tmenu-mobile {
+background-color: #111;
+display: none;
+width: 100%;
+top: 0;
+z-index: 990;
+}
+.tmenu-mobile_positionfixed {
+position: fixed;
+}
+.tmenu-mobile__text {
+color: #fff;
+}
+.tmenu-mobile__container {
+min-height: 64px;
+padding: 20px;
+position: relative;
+box-sizing: border-box;
+display: -webkit-flex;
+display: -ms-flexbox;
+display: flex;
+-webkit-align-items: center;
+-ms-flex-align: center;
+align-items: center;
+-webkit-justify-content: space-between;
+-ms-flex-pack: justify;
+justify-content: space-between;
+}
+.tmenu-mobile__list {
+display: block;
+}
+.tmenu-mobile__burgerlogo {
+display: inline-block;
+font-size: 24px;
+font-weight: 400;
+white-space: nowrap;
+vertical-align: middle;
+}
+.tmenu-mobile__imglogo {
+height: auto;
+display: block;
+max-width: 300px!important;
+box-sizing: border-box;
+padding: 0;
+margin: 0 auto;
+}
+@media screen and (max-width: 980px) {
+.tmenu-mobile__menucontent_hidden {
+display: none;
+height: 100%;
+}
+.tmenu-mobile {
+display: block;
+}
+}
+@media screen and (max-width: 980px) {
+#rec805862272 .t-menuburger {
+-webkit-order: 1;
+-ms-flex-order: 1;
+order: 1;
+}
+}</style><style> #rec805862272 .tmenu-mobile__burgerlogo a { font-size: 44px; }</style><style> @media screen and (min-width: 900px) { #rec805862272 .tmenu-mobile__burgerlogo__title { font-size: 44px; } }</style><div id="nav805862272" class="t967 t967__positionstatic tmenu-mobile__menucontent_hidden" style="background-color: rgba(255,255,255,1); " data-bgcolor-hex="#ffffff" data-bgcolor-rgba="rgba(255,255,255,1)" data-navmarker="nav805862272marker" data-appearoffset="" data-bgopacity-two="" data-menushadow="" data-menushadow-css="" data-bgopacity="1" data-menu-items-align="" data-menu="yes"><div class="t967__maincontainer "><div class="t967__top" style=""><div class="t967__logo"><div ><a href="/" ><div class="t967__logo_text t-title" field="title">Timber Trail Racing </div></a></div></div><nav class="t967__listwrapper t967__mobilelist"><ul role="list" class="t967__list"><li class="t967__list-item" 
+style="padding:0 35px 0 0;"><a class="t-menu__link-item" 
+href="" data-menu-submenu-hook="" data-menu-item-number="1"
+>Ana Sayfa</a></li><li class="t967__list-item" 
+style="padding:0 35px;"><a class="t-menu__link-item" 
+href="" data-menu-submenu-hook="" data-menu-item-number="2"
+>Oyun Hakkında</a></li><li class="t967__list-item" 
+style="padding:0 35px;"><a class="t-menu__link-item" 
+href="" data-menu-submenu-hook="" data-menu-item-number="3"
+>Gizlilik Politikası</a></li><li class="t967__list-item" 
+style="padding:0 35px;"><a class="t-menu__link-item" 
+href="" data-menu-submenu-hook="" data-menu-item-number="4"
+>Şartlar ve koşullar</a></li><li class="t967__list-item" 
+style="padding:0 0 0 35px;"><a class="t-menu__link-item" 
+href="" data-menu-submenu-hook="" data-menu-item-number="5"
+>İletişim</a></li></ul></nav><div class="t967__additionalwrapper"><div class="t967__additional-descr t967__additionalitem">+994559171137</div><div class="t967__button-wrap"><a href="" target="" class="t967__button t-btn t-btn_md " style="color:#ffffff;background-color:#1f5bff;border-radius:100px; -moz-border-radius:100px; -webkit-border-radius:100px;" data-buttonfieldset="button"
+>Daha fazlasını öğrenin</a></div></div></div><div class="t967__bottom" ><div class="t967__middlelinewrapper"><div class="t967__linewrapper"><div
+class="t-divider t967__horizontalline" data-divider-fieldset="color,bordersize,opacity"
+style=" "
+></div></div></div><div class="t967__bottomwrapper" style=""><nav class="t967__listwrapper t967__desktoplist"><ul role="list" class="t967__list t-menu__list t967__menualign_left" style=""><li class="t967__list-item" 
+style="padding:0 35px 0 0;"><a class="t-menu__link-item" 
+href="" data-menu-submenu-hook="" data-menu-item-number="1"
+>Ana Sayfa</a></li><li class="t967__list-item" 
+style="padding:0 35px;"><a class="t-menu__link-item" 
+href="" data-menu-submenu-hook="" data-menu-item-number="2"
+>Oyun Hakkında</a></li><li class="t967__list-item" 
+style="padding:0 35px;"><a class="t-menu__link-item" 
+href="" data-menu-submenu-hook="" data-menu-item-number="3"
+>Gizlilik Politikası</a></li><li class="t967__list-item" 
+style="padding:0 35px;"><a class="t-menu__link-item" 
+href="" data-menu-submenu-hook="" data-menu-item-number="4"
+>Şartlar ve koşullar</a></li><li class="t967__list-item" 
+style="padding:0 0 0 35px;"><a class="t-menu__link-item" 
+href="" data-menu-submenu-hook="" data-menu-item-number="5"
+>İletişim</a></li></ul></nav></div></div></div></div><style>@media screen and (max-width: 980px) {
+#rec805862272 .tmenu-mobile{
+background-color: #ffffff;
+}
+}</style><script>t_onReady(function () {
+t_onFuncLoad('t967_setLogoPadding', function () {
+t967_setLogoPadding('805862272');
+});
+});
+t_onReady(function() {
+t_onFuncLoad('t_menu__highlightActiveLinks', function () {
+t_menu__highlightActiveLinks('.t967__desktoplist .t967__list-item a');
+});
+});
+t_onFuncLoad('t_menu__setBGcolor', function () {
+window.addEventListener('resize', t_throttle(function () {
+t_menu__setBGcolor('805862272', '.t967');
+}));
+});
+t_onReady(function () {
+t_onFuncLoad('t_menu__setBGcolor', function () {
+t_menu__setBGcolor('805862272', '.t967');
+});
+t_onFuncLoad('t_menu__interactFromKeyboard', function () {
+t_menu__interactFromKeyboard('805862272');
+});
+});</script><script>t_onReady(function () {
+var rec = document.querySelector('#rec805862272');
+if (!rec) return;
+var wrapperBlock = rec.querySelector('.t967');
+if (!wrapperBlock) return;
+t_onFuncLoad('t_menu__createMobileMenu', function () {
+t_menu__createMobileMenu('805862272', '.t967');
+});
+});</script><style>#rec805862272 .t-menu__link-item{
+}
+@supports (overflow:-webkit-marquee) and (justify-content:inherit)
+{
+#rec805862272 .t-menu__link-item,
+#rec805862272 .t-menu__link-item.t-active {
+opacity: 1 !important;
+}
+}</style><style> #rec805862272 .t967__logo a { font-size: 44px; } #rec805862272 a.t-menu__link-item { font-weight: 400; } #rec805862272 .t967__additional-langs__lang a { font-weight: 400; }</style><style> @media screen and (min-width: 900px) { #rec805862272 .t967__logo_text { font-size: 44px; } }</style><!--[if IE 8]><style>#rec805862272 .t967 {
+filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#D9ffffff', endColorstr='#D9ffffff');
+}</style><![endif]--></div><div id="rec805862429" class="r t-rec t-rec_pt_90 t-rec_pb_90" style="padding-top:90px;padding-bottom:90px;background-color:#f5f5f5; " data-animationappear="off" data-record-type="409" data-bg-color="#f5f5f5"><!-- t409 --><div class="t409"><div class="t-container"><div class="t409__textwrapper t409__flexcolumn t-col t-col_5 t-prefix_1 t-align_left t409__valign_middle"><div class="t409__title t-heading t-heading_lg" field="title">Timber Trail Racing pinupaz Stilinde Heyecan Dolu Orman Yarışları</div><div class="t409__descr t-descr t-descr_sm" field="descr">Timber Trail, doğa severler için tasarlanmış, heyecan verici ve rekabet dolu bir bilgisayar oyunudur. Bu oyunda pinupaz estetiği ile tasarlanmış özgün karakterler, keskin virajlar, zorlu parkurlar ve doğanın sunduğu eşsiz manzaralar sizleri bekliyor. Hız ve macera dolu bu yolculukta, ormanın derinliklerine dalmaya ve rakiplerinizi geçmeye hazır olun!<br /><br />Yarış dünyasına adım attığınızda, doğanın sunduğu tüm güzellikleri keşfedeceksiniz. Zorlu arazi koşullarında, pinupaz tarzındaki karakterlerinizle birlikte kaymanın ve yarışmanın keyfini çıkaracaksınız. Timber Trail'de her yarış, farklı bir meydan okuma anlamına geliyor. Unutmayın, en iyi performans için strateji ve hızlı düşünme yeteneği gereklidir.</div><div class="t409__btn-container"><div class="t409__btn-wrapper"><a href="" target="" class="t-btn t-btn_md " style="color:#ffffff;background-color:#000000;border-radius:30px; -moz-border-radius:30px; -webkit-border-radius:30px;" data-buttonfieldset="button"
+><table role="presentation" style="width:100%; height:100%;"><tr><td>Daha fazlasını öğrenin</td></tr></table></a></div></div></div><div class="t409__imgwrapper t409__flexcolumn t-col t-col_1 "><img class="t409__img t-img" 
+src="images/tild3534-6230-4539-b261-636264313831__-__empty__1_create_a_vibrant_a.jpg" data-original="images/tild3534-6230-4539-b261-636264313831__1_create_a_vibrant_a.jpg" 
+imgfield="img"
+style="max-height: 550px;"
+alt=""></div></div></div></div><div id="rec805862938" class="r t-rec t-rec_pt_120 t-rec_pb_120" style="padding-top:120px;padding-bottom:120px; " data-record-type="193" ><!-- T175 --><div class="t175"><div class="t-container t-container_flex"><div class="t-col t-col_6 t-col_flex t-align_center"><img class="t175__img t-img" 
+src="images/tild3538-3666-4135-a162-383738653632__-__empty__2vibrant_and_dynamic.jpg" data-original="images/tild3538-3666-4135-a162-383738653632__2vibrant_and_dynamic.jpg" 
+imgfield="img"
+alt=""></div><div class="t-col t-col_6 t-col_flex"><div class="t175__textwrapper"><div class="t175__title t-title t-title_md" field="title">pinupaz ile Yarışmanın Hızı ve Taktikleri</div><div class="t175__text t-text t-text_sm" field="text">Timber Trail’de kazanmak için hızın yanı sıra stratejik düşünmeniz de gereklidir. Orman yolu, sürpriz engellerle dolu; bu nedenle, dikkatli olmanız ve doğru zamanda doğru hamleleri yapmanız gerekebilir. Rakiplerinizle kıyasıya bir mücadele verirken, parkurdaki engelleri nasıl aşacağınızı düşünmelisiniz. Kazanmak için hızlı kararlar almanız önemlidir.<br /><br />Ayrıca, her parkurun kendine özgü zorlukları bulunuyor. Bu zorluklar, görsel estetikle birleşerek size göz alıcı bir deneyim sunmaktadır. pinupaz karakterlerinizle ses getirici başarılar kazanmak için en uygun stratejiyi geliştirmeye çalışın.</div></div></div></div></div></div><div id="rec805863219" class="r t-rec t-rec_pt_135 t-rec_pb_135" style="padding-top:135px;padding-bottom:135px; " data-record-type="799" ><!-- T799 --><div class="t799"><div class="t-container"><div class="t-col t-col_4 t799-col_top"><div class="t799__title t-heading t-heading_sm" field="title">pinupaz Estetiğiyle Görsel Bir Deneyim</div><div class="t799__text t-text t-text_md" field="text">Timber Trail, sadece bir yarış oyunu değil, aynı zamanda göz alıcı bir sanat eseridir. pinupaz tarzındaki karakterler, renkli arka planlar ve doğanın eşsiz tasarımı ile büyüleyici bir atmosfer sunar. Eğlenceli müzikler ve etkileyici ses efektleri, bu dünyada daha fazla zaman geçirmenizi sağlayacak.<br /><br />Orman atmosferi, doğanın getirdiği güzelliklerle birleşerek, yarışlarınızı daha da keyifli hale getirecek. Her yarış, heyecan dolu anlar, unutulmaz zaferler ve pinupaz karakterlerle dolu bir serüven sunmaktadır.</div><a href="" target="" class="t-btn t-btn_md t799__button " style="color:#000000;border:2px solid #000000;background-color:#ffffff;border-radius:30px; -moz-border-radius:30px; -webkit-border-radius:30px;" data-buttonfieldset="button"
+><table role="presentation" style="width:100%; height:100%;"><tr><td>Daha fazlasını öğrenin</td></tr></table></a></div><div class="t-col t-col_8 "><div class="t-slds" style="visibility: hidden;"><ul class="t-slds__arrow_container "><li class="t-slds__arrow_wrapper t-slds__arrow_wrapper-left" data-slide-direction="left"><button 
+type="button" 
+class="t-slds__arrow t-slds__arrow-left t-slds__arrow-withbg" 
+aria-controls="carousel_805863219" 
+aria-disabled="false" 
+aria-label="Предыдущий слайд"
+style="width: 30px; height: 30px;background-color: rgba(255,255,255,1);"><div class="t-slds__arrow_body t-slds__arrow_body-left" style="width: 7px;"><svg role="presentation" focusable="false" style="display: block" viewBox="0 0 7.3 13" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polyline
+fill="none" 
+stroke="#222222"
+stroke-linejoin="butt" 
+stroke-linecap="butt"
+stroke-width="1" 
+points="0.5,0.5 6.5,6.5 0.5,12.5" 
+/></svg></div></button></li><li class="t-slds__arrow_wrapper t-slds__arrow_wrapper-right" data-slide-direction="right"><button 
+type="button" 
+class="t-slds__arrow t-slds__arrow-right t-slds__arrow-withbg" 
+aria-controls="carousel_805863219" 
+aria-disabled="false" 
+aria-label="Следующий слайд"
+style="width: 30px; height: 30px;background-color: rgba(255,255,255,1);"><div class="t-slds__arrow_body t-slds__arrow_body-right" style="width: 7px;"><svg role="presentation" focusable="false" style="display: block" viewBox="0 0 7.3 13" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polyline
+fill="none" 
+stroke="#222222"
+stroke-linejoin="butt" 
+stroke-linecap="butt"
+stroke-width="1" 
+points="0.5,0.5 6.5,6.5 0.5,12.5" 
+/></svg></div></button></li> </ul><div class="t-slds__container"><div class="t-slds__items-wrapper t-slds__witharrows t-slds_animated-none" 
+id="carousel_805863219" data-slider-transition="300" data-slider-with-cycle="true" data-slider-correct-height="true" data-auto-correct-mobile-width="false"
+aria-roledescription="carousel" 
+aria-live="off"
+><div class="t-slds__item t-slds__item_active" data-slide-index="1" 
+role="group" 
+aria-roledescription="slide" 
+aria-hidden="false" 
+aria-label="1 из 3"
+><div class="t-margin_auto" itemscope itemtype="http://schema.org/ImageObject"><div class="t-slds__wrapper t-align_center"><meta itemprop="image" content="images/tild6337-6663-4564-b565-333730643761__3create_a_vibrant_an.jpg"><div class="t799__imgwrapper" bgimgfield="gi_img__0" data-zoom-target="0" data-zoomable="yes" data-img-zoom-url="images/tild6337-6663-4564-b565-333730643761__3create_a_vibrant_an.jpg" ><div class="t-slds__bgimg t-bgimg" data-original="images/tild6337-6663-4564-b565-333730643761__3create_a_vibrant_an.jpg" 
+style="background-image: url('images/tild6337-6663-4564-b565-333730643761__-__resizeb__20x__3create_a_vibrant_an.jpg');"
+></div><div class="t799__separator" ></div></div></div></div></div><div class="t-slds__item" data-slide-index="2" 
+role="group" 
+aria-roledescription="slide" 
+aria-hidden="true" 
+aria-label="2 из 3"
+><div class="t-margin_auto" itemscope itemtype="http://schema.org/ImageObject"><div class="t-slds__wrapper t-align_center"><meta itemprop="image" content="images/tild6661-6136-4039-b666-313166393139__4nd_dynamic_illustra.png"><div class="t799__imgwrapper" bgimgfield="gi_img__1" data-zoom-target="1" data-zoomable="yes" data-img-zoom-url="images/tild6661-6136-4039-b666-313166393139__4nd_dynamic_illustra.png" ><div class="t-slds__bgimg t-bgimg" data-original="images/tild6661-6136-4039-b666-313166393139__4nd_dynamic_illustra.png" 
+style="background-image: url('images/tild6661-6136-4039-b666-313166393139__-__resizeb__20x__4nd_dynamic_illustra.png');"
+></div><div class="t799__separator" ></div></div></div></div></div><div class="t-slds__item" data-slide-index="3" 
+role="group" 
+aria-roledescription="slide" 
+aria-hidden="true" 
+aria-label="3 из 3"
+><div class="t-margin_auto" itemscope itemtype="http://schema.org/ImageObject"><div class="t-slds__wrapper t-align_center"><meta itemprop="image" content="images/tild3336-3864-4239-b662-613165333435__6961c.jpg"><div class="t799__imgwrapper" bgimgfield="gi_img__2" data-zoom-target="2" data-zoomable="yes" data-img-zoom-url="images/tild3336-3864-4239-b662-613165333435__6961c.jpg" ><div class="t-slds__bgimg t-bgimg" data-original="images/tild3336-3864-4239-b662-613165333435__6961c.jpg" 
+style="background-image: url('images/tild3336-3864-4239-b662-613165333435__-__resizeb__20x__6961c.jpg');"
+></div><div class="t799__separator" ></div></div></div></div></div></div><ul class="t-slds__bullet_wrapper"><li class="t-slds__bullet t-slds__bullet_active" data-slide-bullet-for="1"><button 
+type="button" 
+class="t-slds__bullet_body" 
+aria-label="Перейти к слайду 1" 
+aria-current="true" 
+style="background-color: #ebebeb;"></button></li><li class="t-slds__bullet " data-slide-bullet-for="2"><button 
+type="button" 
+class="t-slds__bullet_body" 
+aria-label="Перейти к слайду 2" 
+style="background-color: #ebebeb;"></button></li><li class="t-slds__bullet " data-slide-bullet-for="3"><button 
+type="button" 
+class="t-slds__bullet_body" 
+aria-label="Перейти к слайду 3" 
+style="background-color: #ebebeb;"></button></li></ul></div></div></div></div></div><script>t_onReady(function () {
+var rec = document.getElementById('rec805863219');
+if (!rec) return;
+t_onFuncLoad('t_sldsInit', function () {
+t_sldsInit('805863219');
+});
+var wrapperBlock = rec.querySelector('.t799');
+if (wrapperBlock) {
+wrapperBlock.addEventListener('displayChanged', function () {
+t_onFuncLoad('t_slds_updateSlider', function () {
+t_slds_updateSlider('805863219');
+});
+t_onFuncLoad('t_slds_positionArrows', function () {
+t_slds_positionArrows('805863219');
+});
+});
+}
+});</script><style type="text/css">#rec805863219 .t-slds__bullet_active .t-slds__bullet_body {
+background-color: #222 !important;
+}
+#rec805863219 .t-slds__bullet:hover .t-slds__bullet_body {
+background-color: #222 !important;
+}
+#rec805863219 .t-slds__bullet_body:focus-visible {
+background-color: #222 !important;
+}</style></div><div id="rec805869729" class="r t-rec t-rec_pt_150 t-rec_pb_150" style="padding-top:150px;padding-bottom:150px; " data-record-type="509" ><!-- t509 --><div class="t509"><div class="t-section__container t-container t-container_flex"><div class="t-col t-col_12 "><div 
+class="t-section__title t-title t-title_xs t-align_center t-margin_auto"
+field="btitle"
+>pinupaz ile Kazanmanın Yolları</div><div
+class="t-section__descr t-descr t-descr_xl t-align_center t-margin_auto"
+field="bdescr"
+>We work hard every day to make life of our clients better and happier</div></div></div><style>.t-section__descr {max-width: 560px;}#rec805869729 .t-section__title {margin-bottom: 40px;}#rec805869729 .t-section__descr {margin-bottom: 105px;}@media screen and (max-width: 960px) {#rec805869729 .t-section__title {margin-bottom: 20px;}#rec805869729 .t-section__descr {margin-bottom: 45px;}}</style><div class="t-card__container t-container"><div class="t509__colwrapper t-col t-col_10 t-prefix_1"><div class="t-item"><div class="t509__col t-col t-col_5 t509__mobileimg" itemscope itemtype="http://schema.org/ImageObject"><meta itemprop="image" content="images/tild6363-6561-4266-b961-313539636331__-__resizeb__20x__5.png"><div class="t509__blockimg t-bgimg" data-original="images/tild6363-6561-4266-b961-313539636331__5.png" 
+bgimgfield="li_img__6052100789100" data-image-width="460" data-image-height="340px" 
+style="background-image:url('images/tild6363-6561-4266-b961-313539636331__-__resizeb__20x__5.png');"
+></div></div><div class="t509__col t-col t-col_5 t509__leftcol"><div class="t509__textwrapper t-align_left" style="max-width:400px;"><div class="t509__content t-valign_middle"><div class="t509__box"><div 
+class="t-card__title t-heading t-heading_xs" 
+id="cardtitle1_805869729" 
+field="li_title__6052100789100" 
+>Karakter Seçimi</div><div class="t-card__descr t-descr t-descr_sm" field="li_descr__6052100789100" >İlk adım olarak, hangi pinupaz karakterinin sizin için en uygun özelliklere sahip olduğunu belirleyin. Her karakterin kendine özgü yetenekleri bulunmaktadır.</div><div
+class="t-card__btn t-btn t-btn_sm" 
+id="cardbtn1_805869729" data-field="li_buttontitle"
+style="color:#ffffff;background-color:#1f5bff;border-radius:30px; -moz-border-radius:30px; -webkit-border-radius:30px;" data-buttonfieldset="li_button" data-lid="6052100789100"
+aria-labelledby="cardtitle1_805869729 cardbtn1_805869729" >Daha fazlasını öğrenin</div></div></div></div></div><div class="t509__col t-col t-col_5 t509__rightcol t509__desktopimg"><div class="t509__imgwrapper" style="" itemscope itemtype="http://schema.org/ImageObject"><meta itemprop="image" content="images/tild6363-6561-4266-b961-313539636331__-__resizeb__20x__5.png"><div class="t509__blockimg t-bgimg" data-original="images/tild6363-6561-4266-b961-313539636331__5.png" 
+bgimgfield="li_img__6052100789100" data-image-width="460" data-image-height="340px" 
+style="background-image:url('images/tild6363-6561-4266-b961-313539636331__-__resizeb__20x__5.png');"
+></div></div></div></div><div class="t509__separator t-clear" style=""></div><div class="t-item"><div class="t509__col t-col t-col_5 t509__mobileimg" itemscope itemtype="http://schema.org/ImageObject"><meta itemprop="image" content="images/tild6235-6533-4961-a364-626132383436__-__resizeb__20x__6.png"><div class="t509__blockimg t-bgimg" data-original="images/tild6235-6533-4961-a364-626132383436__6.png" 
+bgimgfield="li_img__6052100789101" data-image-width="460" data-image-height="340px" 
+style="background-image:url('images/tild6235-6533-4961-a364-626132383436__-__resizeb__20x__6.png');"
+></div></div><div class="t509__col t-col t-col_5 t509__leftcol t509__desktopimg"><div class="t509__imgwrapper" style="" itemscope itemtype="http://schema.org/ImageObject"><meta itemprop="image" content="images/tild6235-6533-4961-a364-626132383436__-__resizeb__20x__6.png"><div class="t509__blockimg t-bgimg" data-original="images/tild6235-6533-4961-a364-626132383436__6.png" 
+bgimgfield="li_img__6052100789101" data-image-width="460" data-image-height="340px" 
+style="background-image:url('images/tild6235-6533-4961-a364-626132383436__-__resizeb__20x__6.png');"
+></div></div></div><div class="t509__col t-col t-col_5 t509__rightcol"><div class="t509__textwrapper t-align_left" style="max-width:400px;"><div class="t509__content t-valign_middle"><div class="t509__box"><div 
+class="t-card__title t-heading t-heading_xs" 
+id="cardtitle2_805869729" 
+field="li_title__6052100789101" 
+>Parkurların Analizi:</div><div class="t-card__descr t-descr t-descr_sm" field="li_descr__6052100789101" >Her parkurun kendine özgü zorlukları vardır. Parkurları derinlemesine inceleyerek, nerede hızlanacağınızı ve nerede dikkatli olacağınızı öğrenin.</div><div 
+class="t-card__btn t-btn t-btn_sm" 
+id="cardbtn2_805869729" data-field="li_buttontitle"
+style="color:#ffffff;background-color:#1f5bff;border-radius:30px; -moz-border-radius:30px; -webkit-border-radius:30px;" data-buttonfieldset="li_button" data-lid="6052100789101"
+aria-labelledby="cardtitle2_805869729 cardbtn2_805869729" >Daha fazlasını öğrenin</div></div></div></div></div></div><div class="t509__separator t-clear" style=""></div><div class="t-item"><div class="t509__col t-col t-col_5 t509__mobileimg" itemscope itemtype="http://schema.org/ImageObject"><meta itemprop="image" content="images/tild6436-6563-4534-a265-343664306261__-__resizeb__20x__8.jpeg"><div class="t509__blockimg t-bgimg" data-original="images/tild6436-6563-4534-a265-343664306261__8.jpeg" 
+bgimgfield="li_img__1727864980436" data-image-width="460" data-image-height="340px" 
+style="background-image:url('images/tild6436-6563-4534-a265-343664306261__-__resizeb__20x__8.jpeg');"
+></div></div><div class="t509__col t-col t-col_5 t509__leftcol"><div class="t509__textwrapper t-align_left" style="max-width:400px;"><div class="t509__content t-valign_middle"><div class="t509__box"><div 
+class="t-card__title t-heading t-heading_xs" 
+id="cardtitle3_805869729" 
+field="li_title__1727864980436" 
+>Reflekslerinizi Geliştirin</div><div class="t-card__descr t-descr t-descr_sm" field="li_descr__1727864980436" >Hızlı karar verme yeteneği ve iyi refleksler, zorlu parkurlarda kazanmanın sırrıdır. Eğitim modlarını kullanarak bu becerilerinizi geliştirin.</div><div 
+class="t-card__btn t-btn t-btn_sm" 
+id="cardbtn3_805869729" data-field="li_buttontitle"
+style="color:#ffffff;background-color:#1f5bff;border-radius:30px; -moz-border-radius:30px; -webkit-border-radius:30px;" data-buttonfieldset="li_button" data-lid="1727864980436"
+aria-labelledby="cardtitle3_805869729 cardbtn3_805869729" >Daha fazlasını öğrenin</div></div></div></div></div><div class="t509__col t-col t-col_5 t509__rightcol t509__desktopimg"><div class="t509__imgwrapper" style="" itemscope itemtype="http://schema.org/ImageObject"><meta itemprop="image" content="images/tild6436-6563-4534-a265-343664306261__-__resizeb__20x__8.jpeg"><div class="t509__blockimg t-bgimg" data-original="images/tild6436-6563-4534-a265-343664306261__8.jpeg" 
+bgimgfield="li_img__1727864980436" data-image-width="460" data-image-height="340px" 
+style="background-image:url('images/tild6436-6563-4534-a265-343664306261__-__resizeb__20x__8.jpeg');"
+></div></div></div></div><div class="t509__separator t-clear" style=""></div><div class="t-item"><div class="t509__col t-col t-col_5 t509__mobileimg" itemscope itemtype="http://schema.org/ImageObject"><meta itemprop="image" content="images/tild6333-3465-4434-b064-333463333838__-__resizeb__20x__10.jpeg"><div class="t509__blockimg t-bgimg" data-original="images/tild6333-3465-4434-b064-333463333838__10.jpeg" 
+bgimgfield="li_img__1727865004702" data-image-width="460" data-image-height="340px" 
+style="background-image:url('images/tild6333-3465-4434-b064-333463333838__-__resizeb__20x__10.jpeg');"
+></div></div><div class="t509__col t-col t-col_5 t509__leftcol t509__desktopimg"><div class="t509__imgwrapper" style="" itemscope itemtype="http://schema.org/ImageObject"><meta itemprop="image" content="images/tild6333-3465-4434-b064-333463333838__-__resizeb__20x__10.jpeg"><div class="t509__blockimg t-bgimg" data-original="images/tild6333-3465-4434-b064-333463333838__10.jpeg" 
+bgimgfield="li_img__1727865004702" data-image-width="460" data-image-height="340px" 
+style="background-image:url('images/tild6333-3465-4434-b064-333463333838__-__resizeb__20x__10.jpeg');"
+></div></div></div><div class="t509__col t-col t-col_5 t509__rightcol"><div class="t509__textwrapper t-align_left" style="max-width:400px;"><div class="t509__content t-valign_middle"><div class="t509__box"><div 
+class="t-card__title t-heading t-heading_xs" 
+id="cardtitle4_805869729" 
+field="li_title__1727865004702" 
+>Arkadaşlarınızla Rekabet</div><div class="t-card__descr t-descr t-descr_sm" field="li_descr__1727865004702" >Çok oyunculu modda, arkadaşlarınızla birlikte yarışarak eğlenceli bir zaman geçirin. Bu, hem rekabeti artırır hem de daha fazla keyif almanızı sağlar</div><div 
+class="t-card__btn t-btn t-btn_sm" 
+id="cardbtn4_805869729" data-field="li_buttontitle"
+style="color:#ffffff;background-color:#1f5bff;border-radius:30px; -moz-border-radius:30px; -webkit-border-radius:30px;" data-buttonfieldset="li_button" data-lid="1727865004702"
+aria-labelledby="cardtitle4_805869729 cardbtn4_805869729" >Daha fazlasını öğrenin</div></div></div></div></div></div></div></div></div><script>t_onReady(function () {
+t_onFuncLoad('t509_setHeight', function () {
+window.addEventListener('resize', t_throttle(function () {
+t509_setHeight('805869729');
+}));
+t509_setHeight('805869729');
+var rec = document.querySelector('#rec805869729');
+if (!rec) return;
+var wrapper = rec.querySelector('.t509');
+if (wrapper) {
+wrapper.addEventListener('displayChanged', function () {
+t509_setHeight('805869729');
+});
+}
+});
+});</script></div><div id="rec805870977" class="r t-rec t-rec_pt_150 t-rec_pb_150" style="padding-top:150px;padding-bottom:150px; " data-record-type="560" ><!-- t560--><div class="t560"><div class="t-container"><div class="t-col t-col_8 t-prefix_2 t-align_center"> <div class="t560__title t-title t-title_xs" field="title">Bize Ulaşın:</div><div class="t560__text t-text-impact t-text-impact_xs t560__text-bottom-margin" field="text">+994559171137<br />contact@pinupaz.timbertrailpin.pro</div><div class="t560__descr t-text t-text_sm" field="text2">29 Mehdi Mehdizadeh Street, Baku 1054, Azerbaijan</div><div class="t-sociallinks"><ul role="list" class="t-sociallinks__wrapper" aria-label="Social media links"><!-- new soclinks --><li class="t-sociallinks__item t-sociallinks__item_facebook"><a href="https://google.com" target="_blank" rel="nofollow" aria-label="facebook" style="width: 48px; height: 48px;"><svg class="t-sociallinks__svg" role="presentation" width=48px height=48px viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M50 100c27.6142 0 50-22.3858 50-50S77.6142 0 50 0 0 22.3858 0 50s22.3858 50 50 50Zm3.431-73.9854c-2.5161.0701-5.171.6758-7.0464 2.4577-1.5488 1.4326-2.329 3.5177-2.5044 5.602-.0534 1.4908-.0458 2.9855-.0382 4.4796.0058 1.1205.0115 2.2407-.0085 3.3587-.6888.005-1.3797.0036-2.0709.0021-.9218-.0019-1.8441-.0038-2.7626.0096 0 .8921.0013 1.7855.0026 2.6797.0026 1.791.0052 3.5853-.0026 5.3799.9185.0134 1.8409.0115 2.7627.0096.6912-.0015 1.382-.0029 2.0708.0021.0155 3.5565.0127 7.1128.0098 10.669-.0036 4.4452-.0072 8.8903.0252 13.3354 1.8903-.0134 3.7765-.0115 5.6633-.0095 1.4152.0014 2.8306.0028 4.2484-.0022.0117-4.0009.0088-7.9986.0058-11.9963-.0029-3.9979-.0058-7.9957.0059-11.9964.9533-.005 1.9067-.0036 2.86-.0021 1.2713.0019 2.5425.0038 3.8137-.0096.396-2.679.7335-5.3814.9198-8.0947-1.2576-.0058-2.5155-.0058-3.7734-.0058-1.2578 0-2.5157 0-3.7734-.0059 0-.4689-.0007-.9378-.0014-1.4066-.0022-1.4063-.0044-2.8123.0131-4.2188.198-1.0834 1.3158-1.9104 2.3992-1.8403h5.1476c.0117-2.8069.0117-5.602 0-8.4089-.6636 0-1.3273-.0007-1.9911-.0014-1.9915-.0022-3.9832-.0044-5.975.0131Z" fill="#000000"/></svg></a></li>&nbsp;<li class="t-sociallinks__item t-sociallinks__item_twitter"><a href="https://google.com" target="_blank" rel="nofollow" aria-label="twitter" style="width: 48px; height: 48px;"><svg class="t-sociallinks__svg" role="presentation" xmlns="http://www.w3.org/2000/svg" width=48px height=48px viewBox="0 0 48 48"><g clip-path="url(#clip0_3697_102)"><path fill-rule="evenodd" clip-rule="evenodd" d="M24 48C37.2548 48 48 37.2548 48 24C48 10.7452 37.2548 0 24 0C10.7452 0 0 10.7452 0 24C0 37.2548 10.7452 48 24 48ZM33.3482 14L25.9027 22.4686H25.9023L34 34H28.0445L22.5915 26.2348L15.7644 34H14L21.8082 25.1193L14 14H19.9555L25.119 21.3532L31.5838 14H33.3482ZM22.695 24.1101L23.4861 25.2173V25.2177L28.8746 32.7594H31.5847L24.9813 23.5172L24.1902 22.4099L19.1103 15.2997H16.4002L22.695 24.1101Z" fill="#000000"/></g><defs><clipPath id="clip0_3697_102"><rect width="48" height="48" fill="white"/></clipPath></defs></svg></a></li>&nbsp;<li class="t-sociallinks__item t-sociallinks__item_instagram"><a href="https://google.com" target="_blank" rel="nofollow" aria-label="instagram" style="width: 48px; height: 48px;"><svg class="t-sociallinks__svg" role="presentation" width=48px height=48px viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M50 100C77.6142 100 100 77.6142 100 50C100 22.3858 77.6142 0 50 0C22.3858 0 0 22.3858 0 50C0 77.6142 22.3858 100 50 100ZM25 39.3918C25 31.4558 31.4566 25 39.3918 25H60.6082C68.5442 25 75 31.4566 75 39.3918V60.8028C75 68.738 68.5442 75.1946 60.6082 75.1946H39.3918C31.4558 75.1946 25 68.738 25 60.8028V39.3918ZM36.9883 50.0054C36.9883 42.8847 42.8438 37.0922 50.0397 37.0922C57.2356 37.0922 63.0911 42.8847 63.0911 50.0054C63.0911 57.1252 57.2356 62.9177 50.0397 62.9177C42.843 62.9177 36.9883 57.1252 36.9883 50.0054ZM41.7422 50.0054C41.7422 54.5033 45.4641 58.1638 50.0397 58.1638C54.6153 58.1638 58.3372 54.5041 58.3372 50.0054C58.3372 45.5066 54.6145 41.8469 50.0397 41.8469C45.4641 41.8469 41.7422 45.5066 41.7422 50.0054ZM63.3248 39.6355C65.0208 39.6355 66.3956 38.2606 66.3956 36.5646C66.3956 34.8687 65.0208 33.4938 63.3248 33.4938C61.6288 33.4938 60.2539 34.8687 60.2539 36.5646C60.2539 38.2606 61.6288 39.6355 63.3248 39.6355Z" fill="#000000"/></svg></a></li><!-- /new soclinks --></ul></div></div></div></div></div></div><!--/allrecords-->
